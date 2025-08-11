@@ -34,7 +34,6 @@ jobs:
         handler: function.lambda_handler
         runtime: python3.13
         role: arn:aws:iam::992382490249:role/service-role/pt-with-bug-role-6tz2c1tp
-        logging-config: 
-            LogFormat: JSON
-            ApplicationLogLevel: INFO
+        logging-config: '{"LogFormat":"JSON","ApplicationLogLevel":"INFO"}'
+        ephemeral-storage: 100
         # Add any additional inputs this action supports
